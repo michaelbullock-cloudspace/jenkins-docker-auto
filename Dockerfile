@@ -1,11 +1,11 @@
 # Specify a base image and tag
-FROM amazonlinux:2
+FROM ubuntu:2
 
 # Perform yum update on all packages
-RUN yum -y update
+RUN apt-get -y update
 
 # Install apache package inside the container which creates /var/www/html in the backgroud
-RUN yum install -y httpd
+RUN apt-get -y httpd
 
 # Copy the app inside of the container
 COPY index.html /var/www/html
