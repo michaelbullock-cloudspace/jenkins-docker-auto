@@ -1,5 +1,5 @@
 # Specify a base image and tag
-FROM nginx
+FROM ubuntu
 
 # Perform yum update on all packages
 RUN apt-get -y update
